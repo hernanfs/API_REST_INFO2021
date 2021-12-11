@@ -1,7 +1,5 @@
 package com.informatorio.apirestinfo.entity;
 
-
-
-public class Usuario {
-
+public class Urls {
+    
 }

@@ -5,17 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.1</version>
+		<version>2.6.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.informatorio</groupId>
-	<artifactId>apirestinfo</artifactId>
+	<groupId>com.finalproyect</groupId>
+	<artifactId>informatorio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>apirestinfo</name>
-	<description>Api_Rest project for Spring Boot</description>
+	<name>informatorio</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
-	</properties>
+        <java.version>11</java.version>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -25,17 +25,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+  			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-validator</artifactId>
+  			<version>7.0.1.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -48,6 +45,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 
 	<build>
 		<plugins>
