@@ -1,10 +1,10 @@
 package com.informatorio.apirestinfo.repository;
 
-import com.informatorio.apirestinfo.entity.Evento;
+import com.informatorio.apirestinfo.entity.Tag;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EventoRepository extends JpaRepository<Evento, Long> {
-
+public interface TagRepository extends JpaRepository<Tag, Long> {
+    Tag findByNombre(String nombre);
 }
