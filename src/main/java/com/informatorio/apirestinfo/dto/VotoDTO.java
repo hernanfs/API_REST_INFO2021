@@ -4,7 +4,7 @@ import com.informatorio.apirestinfo.entity.Generado;
 
 import java.time.LocalDateTime;
 
-public class VotoDto {
+public class VotoDTO {
     private Generado generado;
     private Long usuarioId;
     private Long empredimientoId;

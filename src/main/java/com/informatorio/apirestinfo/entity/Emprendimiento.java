@@ -29,7 +29,7 @@ public class Emprendimiento {
     private LocalDateTime fechaDeCreacion;
     @NotNull
     @Positive
-    private BigDecimal objetivo;
+    private Double objetivo;
     private Boolean publicado;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Boolean activo = true;
@@ -84,11 +84,11 @@ public class Emprendimiento {
         this.fechaDeCreacion = fechaDeCreacion;
     }
 
-    public BigDecimal getObjetivo() {
+    public Double getObjetivo() {
         return objetivo;
     }
 
-    public void setObjetivo(BigDecimal objetivo) {
+    public void setObjetivo(Double objetivo) {
         this.objetivo = objetivo;
     }
 

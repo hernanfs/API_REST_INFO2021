@@ -1,6 +1,6 @@
 package com.informatorio.apirestinfo.dto;
 
-public class EventoDto {
+public class EventoDTO {
     private Long eventoId;
     private Long suscriptorId;
 
