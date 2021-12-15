@@ -50,4 +50,5 @@ public class VotoDTO {
     public void setVotado(Boolean votado) {
         this.votado = votado;
     }
+
 }
