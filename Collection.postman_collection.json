@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Ana\",\r\n    \"apellido\": \"Perez\",\r\n    \"email\": \"Anaperez@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"ciudad\": \"Resistencia\",\r\n    \"provincia\": \"Chaco\",\r\n    \"pais\": \"Argentina\",\r\n    \"tipo\": \"USUARIO\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Harry\",\r\n    \"apellido\": \"Potter\",\r\n    \"email\": \"hpotter@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"ciudad\": \"Valle de Godric\",\r\n    \"provincia\": \"Londres\",\r\n    \"pais\": \"Inglaterra\",\r\n    \"tipo\": \"USUARIO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -77,7 +77,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Perez\",\r\n    \"email\": \"juanperez@gmail.com\",\r\n    \"password\": \"7312678\",\r\n    \"ciudad\": \"Fontana\",\r\n    \"provincia\": \"Chaco\",\r\n    \"pais\": \"Argentina\",\r\n    \"tipo\": \"OWNER\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Hermione\",\r\n    \"apellido\": \"Granger\",\r\n    \"email\": \"hgranger@gmail.com\",\r\n    \"password\": \"654321\",\r\n    \"ciudad\": \"City\",\r\n    \"provincia\": \"Londres\",\r\n    \"pais\": \"Inlgaterra\",\r\n    \"tipo\": \"OWNER\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -142,7 +142,7 @@
 							"query": [
 								{
 									"key": "ciudad",
-									"value": "Resistencia"
+									"value": "Valle de Godric"
 								}
 							]
 						}
@@ -188,7 +188,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Lavavajillas de media carga\",\r\n    \"descripcion\": \"Electrodomestico ecologico\",\r\n    \"contenido\": \"Permite ajustar el gasto de agua y electricidad a las necesidades que tengas las familias en ese momento\",\r\n    \"objetivo\": 500000,\r\n    \"publicado\": true,\r\n    \"url\": \"google/images\",\r\n    \"tags\": [\r\n        {\r\n           \"nombre\": \"Ahorro\"\r\n        },\r\n        {\r\n            \"nombre\": \"Sostenibilidad\"\r\n        },\r\n        {\r\n            \"nombre\": \"Electrodomesticos\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Comicon\",\r\n    \"descripcion\": \"Exposicion de Comic\",\r\n    \"contenido\": \"Exposicion de comics y libros \",\r\n    \"objetivo\": 5000,\r\n    \"publicado\": true,\r\n    \"url\": \"amazon/images\",\r\n    \"tags\": [\r\n        {\r\n           \"nombre\": \"Comic\"\r\n        },\r\n        {\r\n            \"nombre\": \"Libros\"\r\n        },\r\n        {\r\n            \"nombre\": \"Disfraces\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -243,7 +243,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Horno inteligente\",\r\n    \"descripcion\": \"Electrodomestico ecologico\",\r\n    \"contenido\": \"predice cuál es el tiempo y temperatura para preparar los alimentos en su punto justo de cocción y además consigue aprovechar el calor residual del equipo\",\r\n    \"objetivo\": 90000,\r\n    \"publicado\": false,\r\n    \"url\": \"google/images\",\r\n    \"tags\": [\r\n        {\r\n           \"nombre\": \"Medio Ambiente\"\r\n        },\r\n        {\r\n            \"nombre\": \"Cocina\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Barbershop\",\r\n    \"descripcion\": \"Venta de productos de barberia\",\r\n    \"contenido\": \"Venta de todo productos y accesorios de barberia y peluqueria\",\r\n    \"objetivo\": 900,\r\n    \"publicado\": false,\r\n    \"url\": \"google/images\",\r\n    \"tags\": [\r\n        {\r\n           \"nombre\": \"Peluqueria\"\r\n        },\r\n        {\r\n            \"nombre\": \"cabello\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -308,7 +308,7 @@
 							"query": [
 								{
 									"key": "nombre",
-									"value": "Cocina"
+									"value": "Comic"
 								}
 							]
 						}
@@ -378,7 +378,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Electrodomesticos ecologicos\",\r\n    \"detalles\": \"Evento que busca lograr mayor utilizacion de electrodomesticos que sean amigables con el medio ambiente\",\r\n    \"fechaDecierre\": \"2021/12/20\",\r\n    \"fechaFinal\": \"2021/12/30\",\r\n    \"premio\": 10000000\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Recital de Musica \",\r\n    \"detalles\": \"Evento de musica que reune a los artistas locales del genero urbano\",\r\n    \"fechaDecierre\": \"2021/12/20\",\r\n    \"fechaFinal\": \"2021/12/30\",\r\n    \"premio\": 10000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
