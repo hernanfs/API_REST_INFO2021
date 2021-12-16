@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Where(clause = "active = true")
+@Where(clause = "activo = true")
 public class Evento {
 
     @Id
@@ -26,7 +26,9 @@ public class Evento {
     @JsonFormat(pattern = "yyyy/MM/dd")
     private LocalDate fechaDeCreacion;
     @JsonFormat(pattern = "yyyy/MM/dd")
-    private LocalDate fechaCierre;
+    private LocalDate fechaDecierre;
+    @JsonFormat(pattern = "yyyy/MM/dd")
+    private LocalDate fechaFinal;
     @Column(name = "estado", nullable=false, columnDefinition = "varchar(32) default 'ABIERTO'")
     @Enumerated(value = EnumType.STRING)
     private Estado estado = Estado.ABIERTO;
@@ -65,12 +67,20 @@ public class Evento {
         this.fechaDeCreacion = fechaDeCreacion;
     }
 
-    public LocalDate getFechaCierre() {
-        return fechaCierre;
+    public LocalDate getFechaDecierre() {
+        return fechaDecierre;
     }
 
-    public void setFechaCierre(LocalDate fechaCierre) {
-        this.fechaCierre = fechaCierre;
+    public void setFechaDecierre(LocalDate fechaDecierre) {
+        this.fechaDecierre = fechaDecierre;
+    }
+
+    public LocalDate getFechaFinal() {
+        return fechaFinal;
+    }
+
+    public void setFechaFinal(LocalDate fechaFinal) {
+        this.fechaFinal = fechaFinal;
     }
 
     public Estado getEstado() {
@@ -112,7 +122,8 @@ public class Evento {
                 ", nombre='" + nombre + '\'' +
                 ", detalles='" + detalles + '\'' +
                 ", fechaDeCreacion=" + fechaDeCreacion +
-                ", fechaCierre=" + fechaCierre +
+                ", fechaDecierre=" + fechaDecierre +
+                ", fechaFinal=" + fechaFinal +
                 ", estado=" + estado +
                 ", emprendimientos=" + emprendimientos +
                 ", premio=" + premio +

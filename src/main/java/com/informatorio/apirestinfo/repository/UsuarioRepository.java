@@ -17,4 +17,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     @Query ("from Usuario where ciudad like %:name% ")
     List<Usuario> findByCiudad(@Param("name") String Ciudad);
 
+
 }

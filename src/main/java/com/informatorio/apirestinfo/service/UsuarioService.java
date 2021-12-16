@@ -10,7 +10,6 @@ import java.util.List;
 
 @Service
 public class UsuarioService {
-
     private final UsuarioRepository usuarioRepository;
     @Autowired
     public UsuarioService(UsuarioRepository usuarioRepository) {
@@ -35,6 +34,7 @@ public class UsuarioService {
         if (!usuario.getProvincia().trim().isEmpty()) { usuarioModificado.setProvincia(usuario.getProvincia()); }
         if (!usuario.getPais().trim().isEmpty()) { usuarioModificado.setPais(usuario.getPais()); }
         if (usuario.getTipo() != null) { usuarioModificado.setTipo(usuario.getTipo()); }
+        usuarioModificado.setUltimaModificacion(LocalDateTime.now());
         return usuarioRepository.save(usuarioModificado);
     }
     public List<Usuario> obtenerTodos(LocalDateTime fechaDeCreacion, String ciudad) {

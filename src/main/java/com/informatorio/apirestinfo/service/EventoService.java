@@ -21,14 +21,12 @@ import java.util.Optional;
 public class EventoService {
     private final EmprendimientoRepository emprendimientoRepository;
     private final EventoRepository eventoRepository;
-
     @Autowired
     public EventoService(EmprendimientoRepository emprendimientoRepository,
-                         EventoRepository eventoRepository){
+                         EventoRepository eventoRepository) {
         this.emprendimientoRepository = emprendimientoRepository;
         this.eventoRepository = eventoRepository;
     }
-
     public Evento guardar(Evento evento) {
         return eventoRepository.save(evento);
     }
@@ -38,18 +36,17 @@ public class EventoService {
         return eventoRepository.save(eventoEliminado);
     }
     public void actualizarEstado(Evento evento, LocalDate ahora) {
-        if (evento.getFechaCierre().isBefore(ahora)) {
-            evento.setEstado(Estado.EN_CURSO); }
-
+        if (evento.getFechaDecierre().isBefore(ahora)) { evento.setEstado(Estado.EN_CURSO); }
+        if (evento.getFechaFinal().isBefore(ahora)) { evento.setEstado(Estado.FINALIZADO); }
     }
     public void actualizar() {
         List<Evento> eventos = eventoRepository.findAll();
         LocalDate ahora = LocalDate.now();
-        eventos.forEach(evento -> actualizarEstado(evento, ahora));
+        eventos.stream().forEach(evento -> actualizarEstado(evento, ahora));
         eventoRepository.saveAll(eventos);
         System.out.println("Estado del evento actualizado.");
     }
-    public Emprendimiento registrar(Long emprendimientoId, Long eventoId, EventoDTO eventoDto) {
+    public Emprendimiento registrar(Long emprendimientoId, Long eventoId, EventoDTO eventoDTO) {
         Emprendimiento emprendimientoRegistrado = emprendimientoRepository.getById(emprendimientoId);
         Evento eventoRegistrado = eventoRepository.getById(eventoId);
         if (eventoRegistrado.getEstado() == Estado.ABIERTO) { emprendimientoRegistrado.addEvento(eventoRegistrado);

@@ -12,7 +12,6 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping(value = "/api/v1/eventos")
 public class EventoController {
-
     private final EventoService eventoService;
     @Autowired
     public EventoController(EventoService eventoService) {
@@ -33,5 +32,4 @@ public class EventoController {
     public ResponseEntity<?> rankingDelEvento(@PathVariable("id") Long id) {
         return new ResponseEntity<>(eventoService.rankear(id), HttpStatus.OK);
     }
-    
 }

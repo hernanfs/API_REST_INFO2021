@@ -14,19 +14,16 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping
 public class EmprendimientoController {
-
     private final EmprendimientoRepository emprendimientoRepository;
     private final EmprendimientoService emprendimientoService;
     private final EventoRepository eventoRepository;
     private final EventoService eventoService;
-
     @Autowired
     public EmprendimientoController(EmprendimientoRepository emprendimientoRepository,
                                     EmprendimientoService emprendimientoService,
                                     EventoRepository eventoRepository,
-                                    EventoService eventoService){
+                                    EventoService eventoService) {
         this.emprendimientoRepository = emprendimientoRepository;
         this.emprendimientoService = emprendimientoService;
         this.eventoRepository = eventoRepository;
@@ -63,6 +60,4 @@ public class EmprendimientoController {
         eventoRepository.findById(eventoId);
         return new ResponseEntity<>(eventoService.registrar(emprendimientoId, eventoId, eventoDTO), HttpStatus.CREATED);
     }
-
-    
 }

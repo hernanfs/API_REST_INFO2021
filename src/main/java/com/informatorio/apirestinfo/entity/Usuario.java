@@ -36,6 +36,7 @@ public class Usuario {
     private Boolean activo =true;
     @CreationTimestamp
     private LocalDateTime fechaDeCreacion;
+    private LocalDateTime ultimaModificacion;
     @NotEmpty(message = "Debe ingresar una ciudad")
     private String ciudad;
     @NotEmpty(message = "Debe ingresar una provincia")
@@ -101,6 +102,14 @@ public class Usuario {
         this.fechaDeCreacion = fechaDeCreacion;
     }
 
+    public LocalDateTime getUltimaModificacion() {
+        return ultimaModificacion;
+    }
+
+    public void setUltimaModificacion(LocalDateTime ultimaModificacion) {
+        this.ultimaModificacion = ultimaModificacion;
+    }
+
     public String getCiudad() {
         return ciudad;
     }
@@ -159,10 +168,12 @@ public class Usuario {
                 ", password='" + password + '\'' +
                 ", activo=" + activo +
                 ", fechaDeCreacion=" + fechaDeCreacion +
+                ", ultimaModificacion=" + ultimaModificacion +
                 ", ciudad='" + ciudad + '\'' +
                 ", provincia='" + provincia + '\'' +
                 ", Pais='" + Pais + '\'' +
                 ", tipo=" + tipo +
+                ", emprendimientos=" + emprendimientos +
                 '}';
     }
 }

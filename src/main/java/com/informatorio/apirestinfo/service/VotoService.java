@@ -17,7 +17,6 @@ public class VotoService {
     private final EmprendimientoRepository emprendimientoRepository;
     private final Converter<VotoDTO, Voto> votoDTOVotoConverter;
     private final VotoRepository votoRepository;
-
     @Autowired
     public VotoService(EmprendimientoRepository emprendimientoRepository,
                        Converter<VotoDTO, Voto> votoDTOVotoConverter,
@@ -26,13 +25,14 @@ public class VotoService {
         this.votoDTOVotoConverter = votoDTOVotoConverter;
         this.votoRepository = votoRepository;
     }
-    public boolean chequearVoto(VotoDTO votoDTO){
+    public Boolean chequearVoto(VotoDTO votoDTO){
         Voto voto = votoDTOVotoConverter.convert(votoDTO);
         return votoRepository.findAll().stream().anyMatch(v -> {
             assert voto != null;
             return v.getUsuarioId().equals(voto.getUsuarioId()) && v.getEmprendimientoId().equals(voto.getEmprendimientoId());
         });
     }
+
     public Boolean crearVoto(VotoDTO votoDTO) {
         Voto voto = votoDTOVotoConverter.convert(votoDTO);
         if(!chequearVoto(votoDTO)){

@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-
 public class Emprendimiento {
 
     @Id
@@ -27,6 +26,7 @@ public class Emprendimiento {
     private String contenido;
     @CreationTimestamp
     private LocalDateTime fechaDeCreacion;
+    private LocalDateTime ultimaModificacion;
     @NotNull
     @Positive
     private Double objetivo;
@@ -82,6 +82,14 @@ public class Emprendimiento {
 
     public void setFechaDeCreacion(LocalDateTime fechaDeCreacion) {
         this.fechaDeCreacion = fechaDeCreacion;
+    }
+
+    public LocalDateTime getUltimaModificacion() {
+        return ultimaModificacion;
+    }
+
+    public void setUltimaModificacion(LocalDateTime ultimaModificacion) {
+        this.ultimaModificacion = ultimaModificacion;
     }
 
     public Double getObjetivo() {
@@ -174,6 +182,7 @@ public class Emprendimiento {
                 ", descripcion='" + descripcion + '\'' +
                 ", contenido='" + contenido + '\'' +
                 ", fechaDeCreacion=" + fechaDeCreacion +
+                ", ultimaModificacion=" + ultimaModificacion +
                 ", objetivo=" + objetivo +
                 ", publicado=" + publicado +
                 ", activo=" + activo +
@@ -186,3 +195,4 @@ public class Emprendimiento {
                 '}';
     }
 }
+

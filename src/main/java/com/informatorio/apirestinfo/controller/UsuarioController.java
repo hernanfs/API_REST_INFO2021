@@ -1,6 +1,7 @@
 package com.informatorio.apirestinfo.controller;
 
 import com.informatorio.apirestinfo.entity.Usuario;
+import com.informatorio.apirestinfo.repository.UsuarioRepository;
 import com.informatorio.apirestinfo.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -15,13 +16,17 @@ import java.time.LocalDateTime;
 @RequestMapping(value = "api/v1/usuarios")
 public class UsuarioController {
     private final UsuarioService usuarioService;
+    private final UsuarioRepository usuarioRepository;
+
     @Autowired
-    public UsuarioController(UsuarioService usuarioService) {
+    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository) {
         this.usuarioService = usuarioService;
+        this.usuarioRepository = usuarioRepository;
     }
 
+
     @PostMapping
-    public ResponseEntity<?> crearUsuario(@Valid @RequestBody Usuario usuario) {
+    public ResponseEntity<?>crearUsuario(@Valid @RequestBody Usuario usuario) {
         return new ResponseEntity<>(usuarioService.guardar(usuario), HttpStatus.CREATED);
     }
     @PutMapping(value = "/{id}/quitar")
@@ -38,5 +43,9 @@ public class UsuarioController {
                                                      @RequestParam(name = "ciudad", required = false) String ciudad) {
         return new ResponseEntity<>(usuarioService.obtenerTodos(fechaDeCreacion, ciudad), HttpStatus.OK);
     }
-    
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<?> obtenerUsuarioId (@PathVariable ("id")Long id){
+        return new ResponseEntity<>(usuarioRepository.findById(id),HttpStatus.OK);
+    }
 }
